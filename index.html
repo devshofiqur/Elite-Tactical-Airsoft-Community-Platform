@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BLACKSITE OPS — Tactical Airsoft & MilSim Community</title>
+  <meta name="description" content="Premium airsoft arena and milsim community platform. Join events, discover fields, connect with tactical teams." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,700&family=Barlow:wght@300;400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ===================== PRELOADER ===================== -->
+<div id="preloader">
+  <div class="preloader-inner">
+    <div class="preloader-logo">BLACKSITE<span>OPS</span></div>
+    <div class="preloader-bar"><div class="preloader-fill"></div></div>
+    <div class="preloader-status" id="preloader-status">INITIALIZING SYSTEM...</div>
+  </div>
+</div>
+
+<!-- ===================== NAVIGATION ===================== -->
+<nav id="mainNav" class="navbar navbar-expand-xl fixed-top">
+  <div class="container-fluid px-4 px-xl-5">
+    <a class="navbar-brand" href="#">
+      <span class="brand-mark">&#9632;</span>
+      BLACKSITE<span class="brand-accent">OPS</span>
+    </a>
+
+    <div class="nav-right-mobile d-xl-none d-flex align-items-center gap-3">
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <span>/</span>
+        <button class="lang-btn" data-lang="bg">BG</button>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+        <span class="toggler-icon"></span>
+        <span class="toggler-icon"></span>
+        <span class="toggler-icon"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link active" href="#hero"><span data-en="Home" data-bg="Начало">Home</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#events"><span data-en="Events" data-bg="Събития">Events</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#fields"><span data-en="Fields" data-bg="Полета">Fields</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#marketplace"><span data-en="Marketplace" data-bg="Пазар">Marketplace</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#teams"><span data-en="Teams" data-bg="Екипи">Teams</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#media"><span data-en="Media" data-bg="Медия">Media</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#guide"><span data-en="Beginner Guide" data-bg="Наръчник">Beginner Guide</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#community"><span data-en="Community" data-bg="Общност">Community</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#about"><span data-en="About" data-bg="За нас">About</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact"><span data-en="Contact" data-bg="Контакти">Contact</span></a></li>
+      </ul>
+      <div class="nav-right d-none d-xl-flex align-items-center gap-3">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <span>/</span>
+          <button class="lang-btn" data-lang="bg">BG</button>
+        </div>
+        <a href="#contact" class="btn-tac btn-tac-primary">
+          <span data-en="Join Now" data-bg="Присъедини се">Join Now</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== HERO SECTION ===================== -->
+<section id="hero" class="hero-section">
+  <div class="hero-bg">
+    <img src="https://i.ibb.co.com/LdH28sx3/Chat-GPT-Image-May-26-2026-10-25-50-PM.jpg" alt="Tactical Operators" class="hero-bg-img" />
+    <div class="hero-overlay"></div>
+    <div class="hero-grain"></div>
+  </div>
+
+  <!-- HUD corner elements -->
+  <div class="hud-corner hud-tl"></div>
+  <div class="hud-corner hud-tr"></div>
+  <div class="hud-corner hud-bl"></div>
+  <div class="hud-corner hud-br"></div>
+
+  <!-- Scan line effect -->
+  <div class="hero-scanlines"></div>
+
+  <div class="container-fluid px-4 px-xl-5 hero-content">
+    <div class="row align-items-center min-vh-100">
+
+      <!-- LEFT: Hero Text -->
+      <div class="col-xl-6 col-lg-7 hero-text-col">
+        <div class="hero-text-inner">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span data-en="LIVE OPS — SEASON 04 ACTIVE" data-bg="НА ЖИВО — СЕЗОН 04 АКТИВЕН">LIVE OPS — SEASON 04 ACTIVE</span>
+          </div>
+          <h1 class="hero-headline">
+            <span class="line-1" data-en="WHERE TACTICS" data-bg="КЪДЕТО ТАКТИКАТА">WHERE TACTICS</span>
+            <span class="line-2" data-en="MEET REALITY" data-bg="СРЕЩА РЕАЛНОСТТА">MEET REALITY</span>
+          </h1>
+          <p class="hero-sub" data-en="Bulgaria's premier airsoft arena and MilSim community platform. Train. Compete. Dominate." data-bg="Водещата айрсофт арена и MilSim общност в България. Тренирай. Победи. Доминирай.">
+            Bulgaria's premier airsoft arena and MilSim community platform. Train. Compete. Dominate.
+          </p>
+          <div class="hero-stats d-flex gap-4 flex-wrap mt-4">
+            <div class="hero-stat">
+              <span class="stat-num">2,400+</span>
+              <span class="stat-label" data-en="OPERATORS" data-bg="ОПЕРАТОРИ">OPERATORS</span>
+            </div>
+            <div class="hero-stat">
+              <span class="stat-num">38</span>
+              <span class="stat-label" data-en="ACTIVE FIELDS" data-bg="АКТИВНИ ПОЛЕТА">ACTIVE FIELDS</span>
+            </div>
+            <div class="hero-stat">
+              <span class="stat-num">12</span>
+              <span class="stat-label" data-en="EVENTS/MONTH" data-bg="СЪБИТИЯ/МЕСЕЦ">EVENTS/MONTH</span>
+            </div>
+          </div>
+          <div class="hero-cta-row mt-4 d-flex gap-3 flex-wrap">
+            <a href="#events" class="btn-tac btn-tac-primary btn-lg-tac">
+              <span data-en="EXPLORE EVENTS" data-bg="РАЗГЛЕДАЙ СЪБИТИЯ">EXPLORE EVENTS</span>
+            </a>
+            <a href="#fields" class="btn-tac btn-tac-ghost btn-lg-tac">
+              <span data-en="FIND A FIELD" data-bg="НАМЕРИ ПОЛЕ">FIND A FIELD</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Registration Form -->
+      <div class="col-xl-5 offset-xl-1 col-lg-5 d-flex justify-content-end hero-form-col mt-5 mt-lg-0">
+        <div class="reg-form-card">
+          <div class="reg-form-header">
+            <div class="reg-step-indicator">
+              <div class="step-dot active" data-step="1"></div>
+              <div class="step-line"></div>
+              <div class="step-dot" data-step="2"></div>
+              <div class="step-line"></div>
+              <div class="step-dot" data-step="3"></div>
+            </div>
+            <p class="reg-step-label" id="stepLabel">
+              <span data-en="STEP 1 / 3 — OPERATOR PROFILE" data-bg="СТЪПКА 1 / 3 — ПРОФИЛ НА ОПЕРАТОРА">STEP 1 / 3 — OPERATOR PROFILE</span>
+            </p>
+          </div>
+
+          <!-- Step 1 -->
+          <div class="reg-step" id="step1">
+            <h3 class="form-title" data-en="JOIN THE UNIT" data-bg="ПРИСЪЕДИНИ СЕ КЪМ ЕДИНИЦАТА">JOIN THE UNIT</h3>
+            <div class="tac-input-group">
+              <label data-en="CALLSIGN" data-bg="ПОЗИВНА">CALLSIGN</label>
+              <input type="text" class="tac-input" placeholder="e.g. Ghost, Viper, Nomad" id="callsign" />
+            </div>
+            <div class="tac-input-group">
+              <label data-en="FULL NAME" data-bg="ПЪЛНО ИМЕ">FULL NAME</label>
+              <input type="text" class="tac-input" placeholder="Your full name" id="fullname" />
+            </div>
+            <div class="tac-input-group">
+              <label data-en="EMAIL ADDRESS" data-bg="ИМЕЙЛ АДРЕС">EMAIL ADDRESS</label>
+              <input type="email" class="tac-input" placeholder="operator@domain.com" id="email" />
+            </div>
+            <button class="btn-tac btn-tac-primary w-100 mt-2" onclick="goStep(2)">
+              <span data-en="NEXT: UNIT DETAILS" data-bg="СЛЕДВАЩА: ДЕТАЙЛИ НА ЕДИНИЦАТА">NEXT: UNIT DETAILS</span>
+            </button>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="reg-step d-none" id="step2">
+            <h3 class="form-title" data-en="UNIT DETAILS" data-bg="ДЕТАЙЛИ НА ЕДИНИЦАТА">UNIT DETAILS</h3>
+            <div class="tac-input-group">
+              <label data-en="EXPERIENCE LEVEL" data-bg="НИВО НА ОПИТ">EXPERIENCE LEVEL</label>
+              <select class="tac-input tac-select" id="experience">
+                <option value="" data-en="Select level..." data-bg="Изберете ниво...">Select level...</option>
+                <option value="recruit" data-en="Recruit (0-1 yr)" data-bg="Новобранец (0-1 г.)">Recruit (0-1 yr)</option>
+                <option value="operator" data-en="Operator (1-3 yrs)" data-bg="Оператор (1-3 г.)">Operator (1-3 yrs)</option>
+                <option value="veteran" data-en="Veteran (3-5 yrs)" data-bg="Ветеран (3-5 г.)">Veteran (3-5 yrs)</option>
+                <option value="elite" data-en="Elite (5+ yrs)" data-bg="Елит (5+ г.)">Elite (5+ yrs)</option>
+              </select>
+            </div>
+            <div class="tac-input-group">
+              <label data-en="PREFERRED ROLE" data-bg="ПРЕДПОЧИТАНА РОЛЯ">PREFERRED ROLE</label>
+              <select class="tac-input tac-select" id="role">
+                <option value="" data-en="Select role..." data-bg="Изберете роля...">Select role...</option>
+                <option data-en="Rifleman" data-bg="Стрелец">Rifleman</option>
+                <option data-en="Sniper" data-bg="Снайперист">Sniper</option>
+                <option data-en="Medic" data-bg="Медик">Medic</option>
+                <option data-en="Support Gunner" data-bg="Поддръжка">Support Gunner</option>
+                <option data-en="Team Leader" data-bg="Ръководител">Team Leader</option>
+              </select>
+            </div>
+            <div class="tac-input-group">
+              <label data-en="CITY / REGION" data-bg="ГРАД / РЕГИОН">CITY / REGION</label>
+              <input type="text" class="tac-input" placeholder="Sofia, Plovdiv, Varna..." id="city" />
+            </div>
+            <div class="d-flex gap-2">
+              <button class="btn-tac btn-tac-ghost flex-fill" onclick="goStep(1)">
+                <span data-en="BACK" data-bg="НАЗАД">BACK</span>
+              </button>
+              <button class="btn-tac btn-tac-primary flex-fill" onclick="goStep(3)">
+                <span data-en="NEXT" data-bg="СЛЕДВАЩА">NEXT</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="reg-step d-none" id="step3">
+            <h3 class="form-title" data-en="FINAL BRIEFING" data-bg="ФИНАЛЕН БРИФИНГ">FINAL BRIEFING</h3>
+            <div class="tac-input-group">
+              <label data-en="PASSWORD" data-bg="ПАРОЛА">PASSWORD</label>
+              <input type="password" class="tac-input" placeholder="Min. 8 characters" id="password" />
+            </div>
+            <div class="tac-input-group">
+              <label data-en="INTERESTS (select all that apply)" data-bg="ИНТЕРЕСИ (изберете всички приложими)">INTERESTS</label>
+              <div class="tac-checkbox-group">
+                <label class="tac-checkbox"><input type="checkbox" /><span data-en="MilSim Events" data-bg="MilSim Събития">MilSim Events</span></label>
+                <label class="tac-checkbox"><input type="checkbox" /><span data-en="CQB Training" data-bg="CQB Обучение">CQB Training</span></label>
+                <label class="tac-checkbox"><input type="checkbox" /><span data-en="Team Competitions" data-bg="Отборни Турнири">Team Competitions</span></label>
+                <label class="tac-checkbox"><input type="checkbox" /><span data-en="Gear & Marketplace" data-bg="Екипировка и Пазар">Gear & Marketplace</span></label>
+              </div>
+            </div>
+            <div class="tac-input-group">
+              <label class="tac-checkbox"><input type="checkbox" id="terms" /><span data-en="I agree to the Operator Code of Conduct" data-bg="Съгласявам се с Кодекса на оператора">I agree to the Operator Code of Conduct</span></label>
+            </div>
+            <div class="d-flex gap-2">
+              <button class="btn-tac btn-tac-ghost flex-fill" onclick="goStep(2)">
+                <span data-en="BACK" data-bg="НАЗАД">BACK</span>
+              </button>
+              <button class="btn-tac btn-tac-primary flex-fill" onclick="submitForm()">
+                <span data-en="DEPLOY" data-bg="ИЗПРАЩАНЕ">DEPLOY</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Success State -->
+          <div class="reg-step d-none" id="stepSuccess">
+            <div class="form-success">
+              <div class="success-icon">&#10003;</div>
+              <h3 data-en="OPERATOR REGISTERED" data-bg="ОПЕРАТОРЪТ Е РЕГИСТРИРАН">OPERATOR REGISTERED</h3>
+              <p data-en="Welcome to BLACKSITE OPS. Check your email for mission briefing." data-bg="Добре дошли в BLACKSITE OPS. Проверете имейла си за мисионен брифинг.">Welcome to BLACKSITE OPS. Check your email for mission briefing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="hero-scroll-indicator">
+    <span class="scroll-line"></span>
+    <span class="scroll-text" data-en="SCROLL" data-bg="ПРЕВЪРТЕТЕ">SCROLL</span>
+  </div>
+</section>
+
+<!-- ===================== EVENTS SECTION ===================== -->
+<section id="events" class="section-dark events-section">
+  <div class="container-fluid px-4 px-xl-5">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-tag" data-en="// UPCOMING OPERATIONS" data-bg="// ПРЕДСТОЯЩИ ОПЕРАЦИИ">// UPCOMING OPERATIONS</div>
+      <h2 class="section-title" data-en="TACTICAL EVENTS" data-bg="ТАКТИЧЕСКИ СЪБИТИЯ">TACTICAL EVENTS</h2>
+      <p class="section-sub" data-en="Register for scheduled MilSim operations and arena skirmishes across Bulgaria." data-bg="Регистрирайте се за MilSim операции и арена схватки в цяла България.">Register for scheduled MilSim operations and arena skirmishes across Bulgaria.</p>
+    </div>
+
+    <div class="row g-4 mt-2">
+      <!-- Event Card 1 -->
+      <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+        <div class="event-card featured">
+          <div class="event-card-img">
+            <img src="https://images.squarespace-cdn.com/content/v1/50e53176e4b0837383d71516/1393546179759-JFVMCOCJL5E2UH4R4WQG/IMG_5486.jpg" alt="Operation Iron Veil" />
+            <div class="event-badge" data-en="FEATURED" data-bg="ПРЕПОРЪЧАНО">FEATURED</div>
+            <div class="event-countdown" id="countdown1"></div>
+          </div>
+          <div class="event-card-body">
+            <div class="event-meta">
+              <span class="event-type milsim" data-en="MILSIM" data-bg="МИЛСИМ">MILSIM</span>
+              <span class="event-date">15 JUN 2026</span>
+            </div>
+            <h3 class="event-name" data-en="OPERATION: IRON VEIL" data-bg="ОПЕРАЦИЯ: ЖЕЛЯЗНА ЗАВЕСА">OPERATION: IRON VEIL</h3>
+            <p class="event-desc" data-en="48-hour large-scale MilSim operation. 200 operators. Full gear immersion. No respawns." data-bg="48-часова мащабна MilSim операция. 200 оператори. Пълно потапяне.">48-hour large-scale MilSim operation. 200 operators. Full gear immersion. No respawns.</p>
+            <div class="event-footer">
+              <div class="event-slots">
+                <div class="slots-bar"><div class="slots-fill" style="width:78%"></div></div>
+                <span data-en="44 SLOTS LEFT" data-bg="44 МЕСТА ОСТАНАЛИ">44 SLOTS LEFT</span>
+              </div>
+              <a href="#contact" class="btn-tac btn-tac-primary btn-sm-tac" data-en="REGISTER" data-bg="РЕГИСТРИРАЙ">REGISTER</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event Card 2 -->
+      <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="event-card">
+          <div class="event-card-img">
+            <img src="https://wmasg.com/uploads/froala/images/articles/1/blob-789f8f859d187c787bdb077a17fbb750." alt="CQB Championship" />
+          </div>
+          <div class="event-card-body">
+            <div class="event-meta">
+              <span class="event-type cqb">CQB</span>
+              <span class="event-date">22 JUN 2026</span>
+            </div>
+            <h3 class="event-name" data-en="CQB CHAMPIONSHIP — SOFIA" data-bg="CQB ШАМПИОНАТ — СОФИЯ">CQB CHAMPIONSHIP — SOFIA</h3>
+            <p class="event-desc" data-en="Indoor arena tournament. 5v5 elimination rounds. Top operators compete for national ranking." data-bg="Вътрешен арена турнир. Елиминационни рундове 5 срещу 5.">Indoor arena tournament. 5v5 elimination rounds. Top operators compete for national ranking.</p>
+            <div class="event-footer">
+              <div class="event-slots">
+                <div class="slots-bar"><div class="slots-fill" style="width:55%"></div></div>
+                <span data-en="18 SLOTS LEFT" data-bg="18 МЕСТА ОСТАНАЛИ">18 SLOTS LEFT</span>
+              </div>
+              <a href="#contact" class="btn-tac btn-tac-ghost btn-sm-tac" data-en="REGISTER" data-bg="РЕГИСТРИРАЙ">REGISTER</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event Card 3 -->
+      <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="event-card">
+          <div class="event-card-img">
+            <img src="https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/1309/1010801/1000w_q95.jpg" alt="Night Operations" />
+            <div class="event-badge sold-out" data-en="SOLD OUT" data-bg="РАЗПРОДАДЕНО">SOLD OUT</div>
+          </div>
+          <div class="event-card-body">
+            <div class="event-meta">
+              <span class="event-type night" data-en="NIGHT OPS" data-bg="НОЩНИ ОПС">NIGHT OPS</span>
+              <span class="event-date">01 JUL 2026</span>
+            </div>
+            <h3 class="event-name" data-en="BLACKOUT: NIGHT OPERATION" data-bg="ЗАТЪМНЕНИЕ: НОЩНА ОПЕРАЦИЯ">BLACKOUT: NIGHT OPERATION</h3>
+            <p class="event-desc" data-en="Full-darkness field operation. NVG-permitted. Recon and extraction scenario." data-bg="Операция в пълна тъмнина. NVG разрешен. Сценарий за разузнаване.">Full-darkness field operation. NVG-permitted. Recon and extraction scenario.</p>
+            <div class="event-footer">
+              <div class="event-slots">
+                <div class="slots-bar"><div class="slots-fill" style="width:100%"></div></div>
+                <span data-en="FULLY BOOKED" data-bg="НАПЪЛНО ЗАПЪЛНЕНО">FULLY BOOKED</span>
+              </div>
+              <a href="#" class="btn-tac btn-tac-disabled btn-sm-tac" data-en="WAITLIST" data-bg="ЛИСТА ЗА ЧАКАНЕ">WAITLIST</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5" data-aos="fade-up">
+      <a href="#" class="btn-tac btn-tac-ghost btn-lg-tac">
+        <span data-en="VIEW ALL EVENTS" data-bg="ВИЖДАЙ ВСИЧКИ СЪБИТИЯ">VIEW ALL EVENTS</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FIELDS SECTION ===================== -->
+<section id="fields" class="section-mid fields-section">
+  <div class="container-fluid px-4 px-xl-5">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-tag" data-en="// FIELD NETWORK" data-bg="// МРЕЖА ОТ ПОЛЕТА">// FIELD NETWORK</div>
+      <h2 class="section-title" data-en="FIND YOUR AO" data-bg="НАМЕРИ СВОЯТА ЗОНА">FIND YOUR AO</h2>
+      <p class="section-sub" data-en="Discover certified airsoft fields and arenas across Bulgaria." data-bg="Открийте сертифицирани айрсофт полета и арени из цяла България.">Discover certified airsoft fields and arenas across Bulgaria.</p>
+    </div>
+
+    <div class="fields-grid mt-4">
+      <div class="field-card field-large" data-aos="fade-right">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Sofia%2C_Graf_Ignatiev_street.jpg" alt="Urban Compound" />
+        <div class="field-overlay">
+          <div class="field-info">
+            <div class="field-type" data-en="URBAN / CQB" data-bg="ГРАДСКИ / CQB">URBAN / CQB</div>
+            <h3 data-en="URBAN COMPOUND — SOFIA" data-bg="ГРАДСКИ КОМПЛЕКС — СОФИЯ">URBAN COMPOUND — SOFIA</h3>
+            <p data-en="Multi-level indoor CQB arena. 3,200 sqm. Climate controlled." data-bg="Многоетажна вътрешна CQB арена. 3 200 кв.м.">Multi-level indoor CQB arena. 3,200 sqm. Climate controlled.</p>
+            <div class="field-tags">
+              <span data-en="INDOOR" data-bg="ВЪТРЕШЕН">INDOOR</span>
+              <span data-en="RENTALS" data-bg="НАЕМИ">RENTALS</span>
+              <span data-en="COACHING" data-bg="ОБУЧЕНИЕ">COACHING</span>
+            </div>
+            <a href="#contact" class="btn-tac btn-tac-primary btn-sm-tac mt-3" data-en="VIEW FIELD" data-bg="ВИЖ ПОЛЕТО">VIEW FIELD</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="field-card field-small" data-aos="fade-left" data-aos-delay="100">
+        <img src="https://www.alltrails.com/mugen/image/location-app-router?url=https%3A%2F%2Fimages.alltrails.com%2FeyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvNDEyMTc0MTMvZjMzMTMwMmRiNGQ1OGZlNDFiNDUwZWIyNjgzMzI1NDEuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJ3ZWJwIiwicmVzaXplIjp7IndpZHRoIjoiMTA4MCIsImhlaWdodCI6IjcwMCIsImZpdCI6ImNvdmVyIn0sInJvdGF0ZSI6bnVsbCwianBlZyI6eyJ0cmVsbGlzUXVhbnRpc2F0aW9uIjp0cnVlLCJvdmVyc2hvb3REZXJpbmdpbmciOnRydWUsIm9wdGltaXNlU2NhbnMiOnRydWUsInF1YW50aXNhdGlvblRhYmxlIjozfX19&w=3840&q=90" alt="Forest Terrain" />
+        <div class="field-overlay">
+          <div class="field-info">
+            <div class="field-type" data-en="WOODLAND" data-bg="ГОРА">WOODLAND</div>
+            <h3 data-en="PHANTOM FOREST — PLOVDIV" data-bg="ГОРИЧКА ФАНТОМ — ПЛОВДИВ">PHANTOM FOREST — PLOVDIV</h3>
+            <div class="field-tags"><span data-en="OUTDOOR" data-bg="ОТКРИТ">OUTDOOR</span><span data-en="72 ACRES" data-bg="72 ДЕКАРА">72 ACRES</span></div>
+            <a href="#contact" class="btn-tac btn-tac-ghost btn-sm-tac mt-3" data-en="VIEW FIELD" data-bg="ВИЖ ПОЛЕТО">VIEW FIELD</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="field-card field-small" data-aos="fade-left" data-aos-delay="200">
+        <img src="https://m.media-amazon.com/images/I/A10bGerzWdL.jpg" alt="Mountain Terrain" />
+        <div class="field-overlay">
+          <div class="field-info">
+            <div class="field-type" data-en="MOUNTAIN" data-bg="ПЛАНИНСКА">MOUNTAIN</div>
+            <h3 data-en="HIGHLAND ASSAULT — VARNA" data-bg="ПЛАНИНСКА АТАКА — ВАРНА">HIGHLAND ASSAULT — VARNA</h3>
+            <div class="field-tags"><span data-en="OUTDOOR" data-bg="ОТКРИТ">OUTDOOR</span><span data-en="ELEVATION" data-bg="СТРЪМНИНА">ELEVATION</span></div>
+            <a href="#contact" class="btn-tac btn-tac-ghost btn-sm-tac mt-3" data-en="VIEW FIELD" data-bg="ВИЖ ПОЛЕТО">VIEW FIELD</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MARKETPLACE SECTION ===================== -->
+<section id="marketplace" class="section-dark marketplace-section">
+  <div class="container-fluid px-4 px-xl-5">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-tag" data-en="// TACTICAL GEAR" data-bg="// ТАКТИЧЕСКО СНАРЯЖЕНИЕ">// TACTICAL GEAR</div>
+      <h2 class="section-title" data-en="MARKETPLACE" data-bg="ПАЗАР">MARKETPLACE</h2>
+      <p class="section-sub" data-en="Buy, sell, and trade authentic airsoft and MilSim equipment." data-bg="Купувайте, продавайте и разменяйте автентично оборудване.">Buy, sell, and trade authentic airsoft and MilSim equipment.</p>
+    </div>
+
+    <div class="row g-4 mt-2">
+      <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="0">
+        <div class="gear-card">
+          <div class="gear-img">
+            <img src="https://www.tacwrk.com/img/130856/crye-precision-cage-plate-carrier-set-multicam-cpc00102-1.jpg?options=rs:fill:400:400/g:ce/dpr:1" alt="Tactical Vest" />
+            <div class="gear-condition new" data-en="NEW" data-bg="НОВО">NEW</div>
+          </div>
+          <div class="gear-body">
+            <div class="gear-cat" data-en="PLATE CARRIER" data-bg="ТАКТИЧЕСКА ЖИЛЕТКА">PLATE CARRIER</div>
+            <h4>Crye Precision AVS — FDE</h4>
+            <div class="gear-price">€ 340</div>
+            <a href="#" class="btn-tac btn-tac-ghost btn-sm-tac w-100" data-en="VIEW LISTING" data-bg="ВИЖ ОБЯВАТА">VIEW LISTING</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="gear-card">
+          <div class="gear-img">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2XZqDxWu97M2DG5eoDBmeZR0GudTRaSpqgg&s" alt="AEG Rifle" />
+            <div class="gear-condition used" data-en="USED" data-bg="ИЗПОЛЗВАНО">USED</div>
+          </div>
+          <div class="gear-body">
+            <div class="gear-cat" data-en="AEG RIFLE" data-bg="AEG ПУШКА">AEG RIFLE</div>
+            <h4>G&G CM16 SRXL — BK</h4>
+            <div class="gear-price">€ 185</div>
+            <a href="#" class="btn-tac btn-tac-ghost btn-sm-tac w-100" data-en="VIEW LISTING" data-bg="ВИЖ ОБЯВАТА">VIEW LISTING</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="gear-card">
+          <div class="gear-img">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-0OZxJplORz12fy34zdhanmxgvKn_Z1dpiA&s" alt="Tactical Helmet" />
+            <div class="gear-condition new" data-en="NEW" data-bg="НОВО">NEW</div>
+          </div>
+          <div class="gear-body">
+            <div class="gear-cat" data-en="HELMET" data-bg="КАСКА">HELMET</div>
+            <h4>FAST Ballistic — MultiCam</h4>
+            <div class="gear-price">€ 210</div>
+            <a href="#" class="btn-tac btn-tac-ghost btn-sm-tac w-100" data-en="VIEW LISTING" data-bg="ВИЖ ОБЯВАТА">VIEW LISTING</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="gear-card">
+          <div class="gear-img">
+            <img src="https://cdn.military.eu/en/media/catalog/product/2/6/2677615_buty-salomon-quest-4d-mid-gtx-forces-2-en-earth-brown-nowe-glowne.jpg" alt="Tactical Boots" />
+            <div class="gear-condition like-new" data-en="LIKE NEW" data-bg="КАТО НОВО">LIKE NEW</div>
+          </div>
+          <div class="gear-body">
+            <div class="gear-cat" data-en="FOOTWEAR" data-bg="ОБУВКИ">FOOTWEAR</div>
+            <h4>Salomon Quest 4D GTX</h4>
+            <div class="gear-price">€ 120</div>
+            <a href="#" class="btn-tac btn-tac-ghost btn-sm-tac w-100" data-en="VIEW LISTING" data-bg="ВИЖ ОБЯВАТА">VIEW LISTING</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5" data-aos="fade-up">
+      <a href="#" class="btn-tac btn-tac-primary btn-lg-tac">
+        <span data-en="BROWSE ALL GEAR" data-bg="РАЗГЛЕДАЙ ВСИЧКО">BROWSE ALL GEAR</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TEAMS SECTION ===================== -->
+<section id="teams" class="section-mid teams-section">
+  <div class="container-fluid px-4 px-xl-5">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-tag" data-en="// ACTIVE UNITS" data-bg="// АКТИВНИ ЕДИНИЦИ">// ACTIVE UNITS</div>
+      <h2 class="section-title" data-en="ELITE TEAMS" data-bg="ЕЛИТНИ ЕКИПИ">ELITE TEAMS</h2>
+      <p class="section-sub" data-en="Bulgaria's most distinguished airsoft units. Join or form your own." data-bg="Най-отличените айрсофт единици в България.">Bulgaria's most distinguished airsoft units. Join or form your own.</p>
+    </div>
+
+    <div class="row g-4 mt-2">
+      <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="0">
+        <div class="team-card">
+          <div class="team-emblem">
+            <img src="https://www.reddickmilitaria.com/images/products/0107-016-001.jpg" alt="Team Iron Cross" />
+          </div>
+          <h4 class="team-name">IRON CROSS</h4>
+          <div class="team-rank" data-en="RANK #1 — NATIONAL" data-bg="РАНГ #1 — НАЦИОНАЛЕН">RANK #1 — NATIONAL</div>
+          <div class="team-stats">
+            <div><span>24</span><small data-en="OPERATORS" data-bg="ОПЕРАТОРИ">OPERATORS</small></div>
+            <div><span>47</span><small data-en="VICTORIES" data-bg="ПОБЕДИ">VICTORIES</small></div>
+            <div><span>SOFIA</span><small data-en="BASE" data-bg="БАЗА">BASE</small></div>
+          </div>
+          <a href="#" class="btn-tac btn-tac-ghost btn-sm-tac w-100" data-en="VIEW UNIT" data-bg="ВИЖ ЕДИНИЦАТА">VIEW UNIT</a>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="team-card">
+          <div class="team-emblem">
+            <img src="https://m.media-amazon.com/images/M/MV5BMTY4MTUxMjQ5OV5BMl5BanBnXkFtZTcwNTUyMzg5Ng@@._V1_.jpg" alt="Ghost Protocol" />
+          </div>
+          <h4 class="team-name">GHOST PROTOCOL</h4>
+          <div class="team-rank" data-en="RANK #2 — NATIONAL" data-bg="РАНГ #2 — НАЦИОНАЛЕН">RANK #2 — NATIONAL</div>
+          <div class="team-stats">
+            <div><span>18</span><small data-en="OPERATORS" data-bg="ОПЕРАТОРИ">OPERATORS</small></div>
+            <div><span>39</span><small data-en="VICTORIES" data-bg="ПОБЕДИ">VICTORIES</small></div>
+            <div><span>PLOVDIV</span><small data-en="BASE" data-bg="БАЗА">BASE</small></div>
+          </div>
+          <a href="#" class="btn-tac btn-tac-ghost btn-sm-tac w-100" data-en="VIEW UNIT" data-bg="ВИЖ ЕДИНИЦАТА">VIEW UNIT</a>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="team-card">
+          <div class="team-emblem">
+            <img src="https://cfw.sarna.net/wiki/images/f/f1/Csvpsigalaxy.jpg" alt="Steel Viper" />
+          </div>
+          <h4 class="team-name">STEEL VIPER</h4>
+          <div class="team-rank" data-en="RANK #3 — NATIONAL" data-bg="РАНГ #3 — НАЦИОНАЛЕН">RANK #3 — NATIONAL</div>
+          <div class="team-stats">
+            <div><span>21</span><small data-en="OPERATORS" data-bg="ОПЕРАТОРИ">OPERATORS</small></div>
+            <div><span>31</span><small data-en="VICTORIES" data-bg="ПОБЕДИ">VICTORIES</small></div>
+            <div><span>VARNA</span><small data-en="BASE" data-bg="БАЗА">BASE</small></div>
+          </div>
+          <a href="#" class="btn-tac btn-tac-ghost btn-sm-tac w-100" data-en="VIEW UNIT" data-bg="ВИЖ ЕДИНИЦАТА">VIEW UNIT</a>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="team-card team-recruit">
+          <div class="team-emblem recruit-emblem">
+            <span>+</span>
+          </div>
+          <h4 class="team-name" data-en="FORM YOUR UNIT" data-bg="СЪЗДАЙ СВОЯТА ЕДИНИЦА">FORM YOUR UNIT</h4>
+          <div class="team-rank" data-en="RECRUIT OPERATORS. BUILD LEGACY." data-bg="НАБИРАЙ ОПЕРАТОРИ. ИЗГРАЖДАЙ НАСЛЕДСТВО.">RECRUIT OPERATORS. BUILD LEGACY.</div>
+          <p class="team-desc" data-en="Register your team and compete in ranked operations." data-bg="Регистрирайте екипа и се конкурирайте в класирани операции.">Register your team and compete in ranked operations.</p>
+          <a href="#contact" class="btn-tac btn-tac-primary btn-sm-tac w-100" data-en="CREATE UNIT" data-bg="СЪЗДАЙ ЕДИНИЦА">CREATE UNIT</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MEDIA SECTION ===================== -->
+<section id="media" class="section-dark media-section">
+  <div class="container-fluid px-4 px-xl-5">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-tag" data-en="// FIELD INTEL" data-bg="// ПОЛЕВО РАЗУЗНАВАНЕ">// FIELD INTEL</div>
+      <h2 class="section-title" data-en="MEDIA / GALLERY" data-bg="МЕДИЯ / ГАЛЕРИЯ">MEDIA / GALLERY</h2>
+    </div>
+
+    <div class="media-mosaic mt-4" data-aos="fade-up">
+      <div class="media-item mi-large">
+        <img src="https://i.ytimg.com/vi/tN7aGBPf99k/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDgOksi3NdHrY5VDqev-zr0XNtgqQ" alt="Op Photo 1" />
+        <div class="media-label" data-en="OP: IRON VEIL 2025" data-bg="ОП: ЖЕЛЯЗНА ЗАВЕСА 2025">OP: IRON VEIL 2026</div>
+      </div>
+      <div class="media-item mi-small">
+        <img src="https://newsroom.intel.com/wp-content/uploads/2025/10/fab-52-day-s-scaled.jpg" alt="Op Photo 2" />
+      </div>
+      <div class="media-item mi-small">
+        <img src="https://images.wsj.net/im-637569/?width=700&height=467" alt="Op Photo 3" />
+      </div>
+      <div class="media-item mi-medium">
+        <img src="https://images.unsplash.com/photo-1484494789010-20fc1a011197?w=700&q=80&fit=crop" alt="Op Photo 4" />
+        <div class="media-label" data-en="CQB CHAMPIONSHIP 2025" data-bg="CQB ШАМПИОНАТ 2025">CQB CHAMPIONSHIP 2026</div>
+      </div>
+      <div class="media-item mi-medium">
+        <img src="https://media.licdn.com/dms/image/v2/D4E12AQEOvKXhZ4LSZA/article-cover_image-shrink_720_1280/B4EZuY90DXJ0AI-/0/1767797902307?e=2147483647&v=beta&t=QGoLbgSVvy9A3MN10-aVKLSHmb1HFN4cQpVYQAL2foc" alt="Op Photo 5" />
+      </div>
+    </div>
+
+    <div class="text-center mt-5" data-aos="fade-up">
+      <a href="#" class="btn-tac btn-tac-ghost btn-lg-tac">
+        <span data-en="FULL MEDIA ARCHIVE" data-bg="ПЪЛЕН МЕДИЕН АРХИВ">FULL MEDIA ARCHIVE</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BEGINNER GUIDE ===================== -->
+<section id="guide" class="section-mid guide-section">
+  <div class="container-fluid px-4 px-xl-5">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-tag" data-en="// NEW OPERATOR?" data-bg="// НОВ ОПЕРАТОР?">// NEW OPERATOR?</div>
+      <h2 class="section-title" data-en="BEGINNER'S GUIDE" data-bg="НАРЪЧНИК ЗА НАЧИНАЕЩИ">BEGINNER'S GUIDE</h2>
+      <p class="section-sub" data-en="Everything you need to step into the field for the first time." data-bg="Всичко, което ви трябва, за да влезете на полето за първи път.">Everything you need to step into the field for the first time.</p>
+    </div>
+
+    <div class="row g-4 mt-2">
+      <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="0">
+        <div class="guide-card">
+          <div class="guide-num">01</div>
+          <h4 data-en="GEAR ESSENTIALS" data-bg="ОСНОВНО СНАРЯЖЕНИЕ">GEAR ESSENTIALS</h4>
+          <p data-en="What to buy for your first game. Budget options, quality picks and what to avoid." data-bg="Какво да купите за първата игра. Бюджетни варианти и качествени избори.">What to buy for your first game. Budget options, quality picks and what to avoid.</p>
+          <a href="#" class="guide-link" data-en="READ MORE" data-bg="ПРОЧЕТИ ПОВЕЧЕ">READ MORE</a>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="guide-card">
+          <div class="guide-num">02</div>
+          <h4 data-en="RULES & SAFETY" data-bg="ПРАВИЛА И БЕЗОПАСНОСТ">RULES & SAFETY</h4>
+          <p data-en="Field rules, eye protection standards, BB limits and operator code of conduct." data-bg="Правила на полето, стандарти за защита на очите и кодекс.">Field rules, eye protection standards, BB limits and operator code of conduct.</p>
+          <a href="#" class="guide-link" data-en="READ MORE" data-bg="ПРОЧЕТИ ПОВЕЧЕ">READ MORE</a>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="guide-card">
+          <div class="guide-num">03</div>
+          <h4 data-en="GAME TYPES" data-bg="ВИДОВЕ ИГРИ">GAME TYPES</h4>
+          <p data-en="CQB, MilSim, skirmish, team deathmatch. Understand the formats and pick your style." data-bg="CQB, MilSim, скирмиш, отборна битка. Разберете форматите.">CQB, MilSim, skirmish, team deathmatch. Understand the formats and pick your style.</p>
+          <a href="#" class="guide-link" data-en="READ MORE" data-bg="ПРОЧЕТИ ПОВЕЧЕ">READ MORE</a>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="guide-card">
+          <div class="guide-num">04</div>
+          <h4 data-en="JOIN A TEAM" data-bg="ПРИСЪЕДИНИ СЕ КЪМ ЕКИП">JOIN A TEAM</h4>
+          <p data-en="How to find and join a unit that matches your playstyle and location." data-bg="Как да намерите и се присъедините към единица, подходяща за вас.">How to find and join a unit that matches your playstyle and location.</p>
+          <a href="#" class="guide-link" data-en="READ MORE" data-bg="ПРОЧЕТИ ПОВЕЧЕ">READ MORE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COMMUNITY SECTION ===================== -->
+<section id="community" class="section-dark community-section">
+  <div class="community-bg">
+    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1920&q=70&fit=crop" alt="Community" />
+    <div class="community-overlay"></div>
+  </div>
+  <div class="container-fluid px-4 px-xl-5 community-content">
+    <div class="row align-items-center">
+      <div class="col-xl-6" data-aos="fade-right">
+        <div class="section-tag" data-en="// COMMUNITY" data-bg="// ОБЩНОСТ">// COMMUNITY</div>
+        <h2 class="section-title" data-en="JOIN THE BROTHERHOOD" data-bg="ПРИСЪЕДИНИ СЕ КЪМ БРАТСТВОТО">JOIN THE BROTHERHOOD</h2>
+        <p class="section-sub" data-en="Bulgaria's most active tactical community. Over 2,400 operators. 38 fields. One mission." data-bg="Най-активната тактическа общност в България. Над 2 400 оператори.">Bulgaria's most active tactical community. Over 2,400 operators. 38 fields. One mission.</p>
+        <div class="community-stats row g-3 mt-3">
+          <div class="col-6"><div class="comm-stat"><span>2,400+</span><p data-en="Registered Operators" data-bg="Регистрирани оператори">Registered Operators</p></div></div>
+          <div class="col-6"><div class="comm-stat"><span>38</span><p data-en="Partner Fields" data-bg="Партньорски полета">Partner Fields</p></div></div>
+          <div class="col-6"><div class="comm-stat"><span>120+</span><p data-en="Active Teams" data-bg="Активни екипи">Active Teams</p></div></div>
+          <div class="col-6"><div class="comm-stat"><span>12</span><p data-en="Monthly Events" data-bg="Месечни събития">Monthly Events</p></div></div>
+        </div>
+        <a href="#contact" class="btn-tac btn-tac-primary btn-lg-tac mt-4">
+          <span data-en="JOIN THE COMMUNITY" data-bg="ПРИСЪЕДИНИ СЕ КЪМ ОБЩНОСТТА">JOIN THE COMMUNITY</span>
+        </a>
+      </div>
+      <div class="col-xl-5 offset-xl-1 mt-5 mt-xl-0" data-aos="fade-left">
+        <div class="testimonials-wrap">
+          <div class="testimonial active" id="testi1">
+            <div class="testi-quote">"</div>
+            <p data-en="BLACKSITE OPS completely changed how I experience airsoft. The organization, the events, the community — nothing else comes close." data-bg="BLACKSITE OPS напълно промени начина ми на играене на айрсофт.">BLACKSITE OPS completely changed how I experience airsoft. The organization, the events, the community — nothing else comes close.</p>
+            <div class="testi-author">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&q=80&fit=crop&crop=face" alt="Operator" />
+              <div>
+                <strong>ECHO-7</strong>
+                <span data-en="Team Iron Cross — Sofia" data-bg="Екип Желязен кръст — София">Team Iron Cross — Sofia</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT SECTION ===================== -->
+<section id="about" class="section-mid about-section">
+  <div class="container-fluid px-4 px-xl-5">
+    <div class="row align-items-center g-5">
+      <div class="col-xl-5" data-aos="fade-right">
+        <div class="about-img-wrap">
+          <img src="https://i.ibb.co.com/fzyqgz6C/Chat-GPT-Image-May-26-2026-10-21-31-PM.jpg" alt="About BLACKSITE OPS" class="about-img" />
+          <div class="about-img-badge">
+            <span class="badge-num">2018</span>
+            <span data-en="FOUNDED" data-bg="ОСНОВАНА">FOUNDED</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 offset-xl-1" data-aos="fade-left">
+        <div class="section-tag" data-en="// OUR MISSION" data-bg="// НАШАТА МИСИЯ">// OUR MISSION</div>
+        <h2 class="section-title" data-en="ABOUT BLACKSITE OPS" data-bg="ЗА BLACKSITE OPS">ABOUT BLACKSITE OPS</h2>
+        <p class="about-text" data-en="BLACKSITE OPS was built by operators, for operators. Founded in 2018 by a group of passionate MilSim enthusiasts, we set out to create Bulgaria's most immersive and professional tactical gaming platform." data-bg="BLACKSITE OPS е изградена от оператори, за оператори. Основана през 2018 г. от група страстни MilSim ентусиасти.">BLACKSITE OPS was built by operators, for operators. Founded in 2018 by a group of passionate MilSim enthusiasts, we set out to create Bulgaria's most immersive and professional tactical gaming platform.</p>
+        <p class="about-text" data-en="From elite competitive events to beginner-friendly skirmishes, every experience is designed with realism, safety, and camaraderie in mind." data-bg="От елитни конкурентни събития до skirmishes за начинаещи — всяко преживяване е проектирано с реализъм.">From elite competitive events to beginner-friendly skirmishes, every experience is designed with realism, safety, and camaraderie in mind.</p>
+        <div class="about-pillars row g-3 mt-2">
+          <div class="col-6"><div class="pillar"><span data-en="REALISM" data-bg="РЕАЛИЗЪМ">REALISM</span></div></div>
+          <div class="col-6"><div class="pillar"><span data-en="SAFETY" data-bg="БЕЗОПАСНОСТ">SAFETY</span></div></div>
+          <div class="col-6"><div class="pillar"><span data-en="BROTHERHOOD" data-bg="БРАТСТВО">BROTHERHOOD</span></div></div>
+          <div class="col-6"><div class="pillar"><span data-en="EXCELLENCE" data-bg="ПРЕВЪЗХОДСТВО">EXCELLENCE</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT SECTION ===================== -->
+<section id="contact" class="section-dark contact-section">
+  <div class="container-fluid px-4 px-xl-5">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-tag" data-en="// REACH OUT" data-bg="// СВЪРЖЕТЕ СЕ">// REACH OUT</div>
+      <h2 class="section-title" data-en="CONTACT HQ" data-bg="СВЪРЖЕТЕ СЕ С НАС">CONTACT HQ</h2>
+    </div>
+
+    <div class="row g-5 mt-2">
+      <div class="col-xl-5" data-aos="fade-right">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">&#9632;</div>
+            <div>
+              <strong data-en="HEADQUARTERS" data-bg="ЩАБ">HEADQUARTERS</strong>
+              <p>Sofia, Bulgaria — 1000</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">&#9632;</div>
+            <div>
+              <strong data-en="RADIO FREQUENCY (EMAIL)" data-bg="РАДИО ЧЕСТОТА (ИМЕЙЛ)">RADIO FREQUENCY (EMAIL)</strong>
+              <p>ops@blacksiteops.bg</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">&#9632;</div>
+            <div>
+              <strong data-en="TACTICAL LINE (PHONE)" data-bg="ТАКТИЧЕСКА ЛИНИЯ (ТЕЛЕФОН)">TACTICAL LINE (PHONE)</strong>
+              <p>+359 2 000 0000</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">&#9632;</div>
+            <div>
+              <strong data-en="OPERATIONAL HOURS" data-bg="РАБОТНО ВРЕМЕ">OPERATIONAL HOURS</strong>
+              <p data-en="Mon–Fri: 09:00–18:00 | Weekends: Field Days" data-bg="Пон–Пет: 09:00–18:00 | Уикенди: Полеви дни">Mon–Fri: 09:00–18:00 | Weekends: Field Days</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-6 offset-xl-1" data-aos="fade-left">
+        <div class="contact-form-wrap">
+          <div class="tac-input-group">
+            <label data-en="YOUR NAME" data-bg="ВАШЕТО ИМЕ">YOUR NAME</label>
+            <input type="text" class="tac-input" placeholder="Operator name" />
+          </div>
+          <div class="tac-input-group">
+            <label data-en="EMAIL" data-bg="ИМЕЙЛ">EMAIL</label>
+            <input type="email" class="tac-input" placeholder="your@email.com" />
+          </div>
+          <div class="tac-input-group">
+            <label data-en="SUBJECT" data-bg="ТЕМА">SUBJECT</label>
+            <select class="tac-input tac-select">
+              <option data-en="General Inquiry" data-bg="Общо запитване">General Inquiry</option>
+              <option data-en="Event Registration" data-bg="Регистрация за събитие">Event Registration</option>
+              <option data-en="Team Registration" data-bg="Регистрация на екип">Team Registration</option>
+              <option data-en="Field Partnership" data-bg="Партньорство с поле">Field Partnership</option>
+              <option data-en="Press / Media" data-bg="Преса / Медия">Press / Media</option>
+            </select>
+          </div>
+          <div class="tac-input-group">
+            <label data-en="MESSAGE / INTEL" data-bg="СЪОБЩЕНИЕ / ИНФОРМАЦИЯ">MESSAGE / INTEL</label>
+            <textarea class="tac-input" rows="4" placeholder="Your message here..."></textarea>
+          </div>
+          <button class="btn-tac btn-tac-primary w-100" onclick="sendMessage()">
+            <span data-en="TRANSMIT MESSAGE" data-bg="ИЗПРАТИ СЪОБЩЕНИЕ">TRANSMIT MESSAGE</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="container-fluid px-4 px-xl-5">
+      <div class="row g-5">
+        <div class="col-xl-4 col-md-6">
+          <div class="footer-brand">BLACKSITE<span>OPS</span></div>
+          <p class="footer-desc" data-en="Bulgaria's premier airsoft arena and MilSim community. Train, compete, and dominate the field." data-bg="Водещата айрсофт арена и MilSim общност в България.">Bulgaria's premier airsoft arena and MilSim community. Train, compete, and dominate the field.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link">FB</a>
+            <a href="#" class="social-link">IG</a>
+            <a href="#" class="social-link">YT</a>
+            <a href="#" class="social-link">DC</a>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-3 col-6">
+          <h5 class="footer-heading" data-en="OPERATIONS" data-bg="ОПЕРАЦИИ">OPERATIONS</h5>
+          <ul class="footer-links">
+            <li><a href="#events" data-en="Events" data-bg="Събития">Events</a></li>
+            <li><a href="#fields" data-en="Fields" data-bg="Полета">Fields</a></li>
+            <li><a href="#teams" data-en="Teams" data-bg="Екипи">Teams</a></li>
+            <li><a href="#guide" data-en="Beginner Guide" data-bg="Наръчник">Beginner Guide</a></li>
+          </ul>
+        </div>
+        <div class="col-xl-2 col-md-3 col-6">
+          <h5 class="footer-heading" data-en="PLATFORM" data-bg="ПЛАТФОРМА">PLATFORM</h5>
+          <ul class="footer-links">
+            <li><a href="#marketplace" data-en="Marketplace" data-bg="Пазар">Marketplace</a></li>
+            <li><a href="#media" data-en="Media" data-bg="Медия">Media</a></li>
+            <li><a href="#community" data-en="Community" data-bg="Общност">Community</a></li>
+            <li><a href="#about" data-en="About" data-bg="За нас">About</a></li>
+          </ul>
+        </div>
+        <div class="col-xl-4 col-md-6">
+          <h5 class="footer-heading" data-en="INTEL FEED" data-bg="ИНФОРМАЦИОНЕН КАНАЛ">INTEL FEED</h5>
+          <p class="footer-desc" data-en="Subscribe for event updates and field intel." data-bg="Абонирайте се за актуализации на събития.">Subscribe for event updates and field intel.</p>
+          <div class="footer-subscribe">
+            <input type="email" class="tac-input" placeholder="your@email.com" />
+            <button class="btn-tac btn-tac-primary btn-sm-tac" data-en="SUBSCRIBE" data-bg="АБОНИРАЙ">SUBSCRIBE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container-fluid px-4 px-xl-5">
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <p class="mb-0" data-en="© 2026 BLACKSITE OPS. ALL RIGHTS RESERVED." data-bg="© 2026 BLACKSITE OPS. ВСИЧКИ ПРАВА ЗАПАЗЕНИ.">© 2026 Dev-Shofiqur | ALL RIGHTS RESERVED.</p>
+        <div class="footer-legal">
+          <a href="#" data-en="Privacy Policy" data-bg="Политика за поверителност">Privacy Policy</a>
+          <a href="#" data-en="Terms of Use" data-bg="Условия за ползване">Terms of Use</a>
+          <a href="#" data-en="Cookie Policy" data-bg="Политика за бисквитки">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== BACK TO TOP ===================== -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+  <span class="btt-arrow"></span>
+  <span class="btt-text" data-en="TOP" data-bg="ГОРЕ">TOP</span>
+</button>
+
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<!-- Bootstrap JS CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS Animation -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<!-- Main JS -->
+<script src="js/script.js"></script>
+</body>
+</html>
